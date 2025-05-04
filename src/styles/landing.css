@@ -156,9 +156,10 @@ body {
   font-size: 1rem;
 }
 
+/* About Us Section */
 .about {
   padding: 50px 20px;
-  background-color: #333;
+  background-color: #1e293b; /* Dark background */
   color: white;
   text-align: center;
 }
@@ -170,7 +171,7 @@ body {
 
 .about p {
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .trailer {
@@ -195,10 +196,21 @@ body {
   border-radius: 10px;
 }
 
+/* Footer Section */
 .footer {
-  background-color: #222;
-  padding: 20px;
-  font-size: 0.9rem;
+  background-color: #0f172a; /* Darker background */
+  color: #94a3b8; /* Light gray text */
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: #60a5fa; /* Light blue links */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
 
 .leaderboard {
@@ -335,4 +347,39 @@ body {
   100% {
     background-position: 200% 50%; /* End position matches the start for a seamless loop */
   }
+}
+
+/* Navigation Menu Styles */
+.navigation-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.navigation-menu ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navigation-menu li {
+  margin: 0 15px;
+}
+
+.navigation-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navigation-menu a:hover {
+  color: #60a5fa; /* Light blue on hover */
 }

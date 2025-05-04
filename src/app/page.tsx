@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/landing.css"; // Import the landing page CSS
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { NavigationMenu } from "../components/ui/navigation-menu";
+import { NavigationMenu } from "@/components/ui/navigation-menu";
 import SignIn from "../components/SignIn"; // SignIn component
 import PlayersList from "../components/PlayersList";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -10,7 +10,7 @@ import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from "@/co
 export default function Home() {
   return (
     <AuroraBackground>
-      <NavigationMenu />
+      <NavigationMenu /> {/* Navbar is placed at the top */}
       <div className="landing-page">
         {/* Hero Section */}
         <section className="hero">
@@ -108,10 +108,33 @@ export default function Home() {
           </div>
         </section>
 
+        {/* About Us Section */}
+        <section id="about" className="about">
+          <h2 className="text-2xl font-bold text-center mb-6">About Us</h2>
+          <p className="text-center text-lg text-gray-200 max-w-3xl mx-auto">
+            Planetary Deep Sea Survival is a thrilling underwater adventure game that combines exploration, survival, and multiplayer gameplay. 
+            Our mission is to create an immersive experience that allows players to dive into the mysteries of the ocean, battle sea creatures, 
+            and uncover hidden treasures. Join us on this journey and explore the depths like never before!
+          </p>
+        </section>
+
         {/* Players Section */}
         <section id="players" className="players">
           <PlayersList />
         </section>
+
+        {/* Footer Section */}
+        <footer className="footer">
+          <div className="text-center text-gray-400 py-4">
+            <p>&copy; 2025 Planetary Deep Sea Survival. All rights reserved.</p>
+            <p>
+              Follow us on 
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline ml-1">Twitter</a>, 
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline ml-1">Facebook</a>, and 
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline ml-1">Instagram</a>.
+            </p>
+          </div>
+        </footer>
       </div>
     </AuroraBackground>
   );
