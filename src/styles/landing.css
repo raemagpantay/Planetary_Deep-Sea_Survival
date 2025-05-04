@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: Arial, sans-serif;
+  background: url('/images/hero-bg.jpg') no-repeat center center; /* Center the image */
+  background-size: cover; /* Stretch the image to cover the viewport */
+  color: white;
+}
+  
+.landing-page {
+  position: relative; /* Ensure it doesn't interfere with the aurora background */
+  z-index: 1; /* Ensure it sits above the aurora background */
+  text-align: center;
+}
+  
+.hero, .signin, .features {
+  background: none; /* Remove any background colors or images */
+  z-index: 2; /* Ensure content is above the aurora background */
+}
+
+.hero {
+  padding: 100px 20px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.download-button {
+  background-color: #ff5722;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.features, .screenshots, .about {
+  padding: 50px 20px;
+}
+
+.features h2, .screenshots h2, .about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.screenshot-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.screenshot-item img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.screenshot-item:hover img {
+  transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+.screenshot-item p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.screenshot-description {
+  position: absolute;
+  bottom: -50px; /* Start hidden below the image */
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  transition: bottom 0.3s ease; /* Sliding animation */
+}
+
+.screenshot-item:hover .screenshot-description {
+  bottom: 0; /* Slide up to reveal the description */
+}
+
+.screenshots {
+  padding: 50px 20px;
+  background-color: #f1f1f1;
+}
+
+.screenshots h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about {
+  padding: 50px 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.trailer {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #222;
+  color: white;
+}
+
+.trailer h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.trailer-container iframe {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.footer {
+  background-color: #222;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.leaderboard {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.leaderboard th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.auth-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.auth-container button {
+  padding: 10px 20px;
+  background-color: #00B4D8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background-color: #45a049;
+}
+
+/* Parallax Styles */
+.parallax {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  perspective: 1px;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax__layer--deep {
+  transform: translateZ(-2px) scale(3);
+}
