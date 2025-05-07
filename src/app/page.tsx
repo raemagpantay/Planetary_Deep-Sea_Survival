@@ -6,6 +6,8 @@ import SignIn from "../components/SignIn"; // SignIn component
 import PlayersList from "../components/PlayersList";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import LayoutGridDemo from "@/components/ui/layout-grid-demo";
+
 
 export default function Home() {
   return (
@@ -20,9 +22,13 @@ export default function Home() {
           <p className="mt-4 text-lg text-gray-200">
             Dive into the depths and explore the mysteries of the ocean.
           </p>
-          <button className="mt-6 rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600">
-            Get Started
-          </button>
+          <a
+            href="/files/PlanetaryDeepSeaSurvival.apk" // Replace with the actual path to your APK file
+            download
+            className="btn-6 mt-6 inline-block text-center text-white font-semibold no-underline"
+          >
+            <span>Download</span>
+          </a>
         </section>
 
         {/* Sign-In Section */}
@@ -73,22 +79,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Trailer Section */}
-        <section id="trailer" className="trailer">
-          <h2>Game Trailer</h2>
-          <div className="trailer-container">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/your-video-id" // Replace with your YouTube video link
-              title="Game Trailer"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </section>
-
         {/* Screenshots Section */}
         <section id="screenshots" className="screenshots">
           <h2>Game Screenshots</h2>
@@ -105,6 +95,22 @@ export default function Home() {
               <img src="/images/screenshot3.jpg" alt="Screenshot 3" />
               <p>Survive the depths</p>
             </div>
+          </div>
+        </section>
+
+        {/* Trailer Section */}
+        <section id="trailer" className="trailer">
+          <h2>Game Trailer</h2>
+          <div className="trailer-container">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/your-video-id" // Replace with your YouTube video link
+              title="Game Trailer"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
         </section>
 
